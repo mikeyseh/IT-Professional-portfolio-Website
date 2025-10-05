@@ -1,36 +1,48 @@
+/* --------------------------------------------------
+   Ndivhuwo Michael Portfolio - Complete CSS
+---------------------------------------------------*/
+
+/* General body settings */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #e6e6e6;
-    color: #333;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e6e6e6;
+  color: #333;
 }
 
+/* Header */
 header {
-    background-color: var(--custom-blue, #006699);
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    position: relative
+  background-color: var(--custom-blue, #006699);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: relative;
 }
 
+/* Navigation */
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+  display: inline;
+  margin: 0 10px;
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    text-decoration: color 0.3s ease;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
+nav ul li a:hover {
+  color: #cce7ff;
+}
+
+/* Floating profile image */
 .profile-top-right {
   position: absolute;
   top: 10px;
@@ -126,4 +138,72 @@ form {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 400
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input,
+textarea,
+button {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: inherit;
+  transition: box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 102, 153, 0.3);
+}
+
+button {
+  background-color: var(--custom-blue, #006699);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #005580;
+}
+
+/* Footer */
+footer {
+  background-color: var(--custom-blue, #006699);
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 40px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  header {
+    text-align: center;
+  }
+
+  .profile-top-right {
+    position: static;
+    display: block;
+    margin: 10px auto;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .projects {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Root variable for custom color */
+:root {
+  --custom-blue: #006699;
+}
