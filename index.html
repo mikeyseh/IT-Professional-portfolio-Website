@@ -6,49 +6,54 @@
     <title>IT Professional Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <h1>Ndivhuwo Michael</h1>
+<body class="bg-gray-100 text-gray-800 relative">
+    
+    <div  class="absolute top-4 right-4 w-24 h-24 md:w-28 md:h-28 z-50">
+      <img src="" alt="ndivhuwo Michael" class="w-full h-full rounded-full border-white shadow-lg object object-cover">
+    </div>
+        <header class="bg-blue-700 text-white py-6 shadow-md">
+            <div class="container mx-auto flex flex-col md:flex-row items-center jusitfy-between px-4">
+        <h1 class="text-3xl font-bold mb-3 md:mb-0">Ndivhuwo Michael</h1>
         <nav>
-            <ul>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul class="flex space-x-4 text-lg">
+                <li><a href="#skills"class="hover:text-yellow-300">Skills</a></li>
+                <li><a href="#projects"class="hover:text-yellow-300">Projects</a></li>
+                <li><a href="#contact"class="hover:text-yellow-300">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="skills">
-        <h2>Skills</h2>
-        <ul class="skills-list">
-            <li>Web Development</li>
-            <li>Database Management</li>
-            <li>C++ programming</li>
-            <li>Java Programming</li>
+        <h2 class="text-2xl font-bold mb-6">Skills</h2>
+        <ul class="flex flex-wrap jusitfy-center gap-4">
+            <li class="bg-white px-4 py-2 border border-gray-300 rounded-lg shadow-sm">Web Development</li>
+            <li class="bg-white px-4 py-2 border border-gray-300 rounded-lg shadow-sm">Database Management</li>
+            <li class="bg-white px-4 py-2 border border-gray-300 rounded-lg shadow-sm">C++ programming</li>
+            <li class="bg-white px-4 py-2 border border-gray-300 rounded-lg shadow-sm">Java Programming</li>
         </ul>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects">
-            <div class="project">
-                <h3>Project 1</h3>
+    <section id="projects" class="py-16 bg-gray-50">
+        <h2 class="text-2xl font-bold text-center mb-8">Projects</h2>
+        <div class="grid md:grid-cols-2 gap-6 container mx-auto px-4">
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+                <h3 class="text-xl font-semibold mb-2">Artist Platform Website</h3>
                 <p>Creation of website designed as a platform for artists in South Africa. Built in functionalities of JavaScript and rsponsive Css</p>
             </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>KanBan for tasks.</p>
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+                <h3 class="text-xl font-semibold mb-2">Kanban Task Tracker</h3>
+                <p>A Kanban-style task tracker for mananging personal and team projects.</p>
             </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form action="#">
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Message" required></textarea>
-            <button type="submit">Send</button>
+    <section id="contact" class="py-16 text-center">
+        <h2 class="text-2xl font-bold mb-6">Contact Me</h2>
+        <form action="max-w-md mx-auto flex flex-col gap-4">
+            <input type="text" placeholder="Name" required class= "p-3 rounded border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200">
+            <input type="email" placeholder="Email" required class= "p-3 rounded border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200">
+            <textarea placeholder="Message" required class= "p-3 rounded border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200"></textarea>
+            <button type="submit class="bg-blue-700 text-white py-3 rounded hover:bg-blue-800 transition">Send</button>
         </form>
     </section>
     <div class="it-portfolio">
